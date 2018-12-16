@@ -47,6 +47,8 @@ header{
   line-height: 100px ;
   text-align: center;
   user-select: none;
+  font-size: 25px ;
+  font-weight: 400 ;
 }
 
 
@@ -66,5 +68,31 @@ footer{
 
 main{
   text-align: center;
-  /* font-size: 100px; */
-}
+  }
+
+  .all, .sport{
+    height: 43px;
+    width: 300px;
+    float: left;
+    text-align: center;
+    font-size: 20px ;
+  font-weight: 400 ;
+  box-shadow:  0 0 6px ;
+  line-height: 43px ;
+    
+  }
+
+  .all{
+    margin-left: 200px ;
+  }
+
+  .all:hover{
+    background-color: lightgrey ;
+    cursor: pointer;
+  }
+
+
+  .sport:hover{
+    background-color: lightgrey ;
+    cursor: pointer;
+  }

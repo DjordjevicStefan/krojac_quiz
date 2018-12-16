@@ -2,13 +2,12 @@ let holder = document.querySelector('header > h2');
 let optionAnswer = document.querySelectorAll('.option');
 let footer = document.querySelector('footer > p');
 let main = document.querySelector('main');
+let all = document.querySelector('.all');
+let sport = document.querySelector('.sport');
 let resolt = 0 ;
 
+all.onclick = startQuiz;
 
-// for (let i = 0; i < optionAnswer.length; i++) {
-//     optionAnswer[i].onclick = userAnswer ;
-    
-// }
 
 
 function addButton(opt){
@@ -38,7 +37,7 @@ footer.innerHTML = "pitanje " + (quiz.qNumber +1) + " od " + questions.length ;
 }
 
 
-startQuiz();
+// startQuiz();
 
 
 function userAnswer(){
