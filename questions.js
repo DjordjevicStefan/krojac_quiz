@@ -16,7 +16,7 @@ let questions = [
   new Question("Koje jezero je najdublje na svetu?", ["Viktorijino", "Kaspijsko" , "Bajkalsko", "Tanganjika"], "Bajkalsko", 10, "all"),
   new Question("Koliko titula ima Mark Markez u motoGP-u?", ["4", "3" , "5", "6"], "5", 10, "sport"),
   new Question("WW2 je zavrsen kog datuma?", ["1.okt 1945", "2.sep 1945" , "14.okt 1945", "7.sep 1945"], "2.sep 1945", 10, "all" ),
-  new Question("Ko je osnovao FK CZ?", ["'Krcun' Penezic", "aleksandar vucic" , "Brano Micunovic", "Arkan"], "Slobodan 'Krcun' Penezic", 10, "sport"),
+  new Question("Ko je osnovao FK CZ?", ["'Krcun' Penezic", "aleksandar vucic" , "Brano Micunovic", "Arkan"], "'Krcun' Penezic", 10, "sport"),
 ] ;
 
 let sportQuestions = questions.filter(function(sports){
