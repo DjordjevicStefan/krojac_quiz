@@ -11,6 +11,12 @@ all.onclick = startQuizAll;
 function startQuizAll(){
     quizSelect(catFilter("all"));
     startQuiz();
+    sport.onclick = function() {
+        return false;
+};
+all.onclick = function() {
+    return false;
+};
 }
 
 sport.onclick = startQuizSport;
@@ -18,6 +24,12 @@ sport.onclick = startQuizSport;
 function startQuizSport(){
     quizSelect(catFilter("sport"));
     startQuiz();
+    all.onclick = function() {
+        return false;
+};
+sport.onclick = function() {
+    return false;
+};
 }
 
 
