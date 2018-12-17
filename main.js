@@ -77,6 +77,7 @@ function userAnswer(){
     }, 1300);
      
   } else {
+    
       setTimeout(() => {
         holder.innerHTML = "osvojili ste " + resolt + " poena od " + (quiz.questions.length*10) ;
         footer.innerHTML = "osvojili ste " + resolt + " poena od " + (quiz.questions.length*10) ;
