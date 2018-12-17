@@ -1,16 +1,17 @@
-function Quiz(questions){
+
+let quiz ;
+
+function quizSelect(test){
+ 
+  function Quiz(quest){
     this.points = 0;
-    this.questions = questions ;
+    this.questions = quest ;
     this.qNumber = 0 ;
 }
 
 Quiz.prototype.getQuestion = function(){
  return this.questions[this.qNumber];
- 
- 
-}
-
-
+  }
 
 Quiz.prototype.randomOption = function(){
     let qArrey = [].concat(quiz.getQuestion().options);
@@ -22,11 +23,10 @@ Quiz.prototype.randomOption = function(){
      qArrey.splice(random,1);
   }
   return randomArrey ;
-  
-  
 }
 
+quiz = new Quiz(test) ;
 
-let quiz = new Quiz(questions) ;
+}
 
 

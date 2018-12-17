@@ -4,7 +4,6 @@ function Question(text, options, answer, points, category){
   this.answer = answer ;
   this.points = points ;
   this.category = category ;
-
 }
 
 let questions = [
@@ -18,10 +17,27 @@ let questions = [
   new Question("Koliko titula ima Mark Markez u motoGP-u?", ["4", "3" , "5", "6"], "5", 10, "sport")
 ] ;
 
+let sportQuestions = questions.filter(function(sports){
+  return sports.category === "sport" ;
+  });
 
-// let sport = questions.filter(function(sports){
-// return sports.category === "sport" ;
+function catFilter(arg){
+  if (arg == "sport") {
+    return sportQuestions ;
+  } ;
+ if (arg=="all") {
+    return questions ;
+  }
+}
 
-// });
+
+
+
+
+
+
+
+
+
 
 

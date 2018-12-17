@@ -6,18 +6,30 @@ let all = document.querySelector('.all');
 let sport = document.querySelector('.sport');
 let resolt = 0 ;
 
-all.onclick = startQuiz;
+all.onclick = startQuizAll;
+
+function startQuizAll(){
+    quizSelect(catFilter("all"));
+    startQuiz();
+}
+
+sport.onclick = startQuizSport;
+
+function startQuizSport(){
+    quizSelect(catFilter("sport"));
+    startQuiz();
+}
 
 
 
 function addButton(opt){
 let x = opt;
 if (opt == "all" ) {
-    for (let i = 0; i < optionAnswer.length; i++) {
+    for (let i = 0; i < 4; i++) {
         optionAnswer[i].onclick = userAnswer ;
     };
 } else{
-    for (let i = 0; i < optionAnswer.length; i++) {
+    for (let i = 0; i < 4; i++) {
         optionAnswer[i].onclick = function() {
             return false;
     };
@@ -33,12 +45,8 @@ function startQuiz(){
    for (let i = 0; i < 4; i++) {
     optionAnswer[i].innerHTML = op[i] ;
    };
-footer.innerHTML = "pitanje " + (quiz.qNumber +1) + " od " + questions.length ;
+footer.innerHTML = "pitanje " + (quiz.qNumber +1) + " od " + quiz.questions.length ;
 }
-
-
-// startQuiz();
-
 
 function userAnswer(){
   if (this.innerHTML == quiz.getQuestion().answer ) {
@@ -48,7 +56,7 @@ function userAnswer(){
         this.style.background = "red" ;
     };
 
-  if (quiz.qNumber !== (questions.length - 1)) {
+  if (quiz.qNumber !== (quiz.questions.length - 1)) {
       addButton("r");
     quiz.qNumber++ ;
     setTimeout(() => {
@@ -58,11 +66,12 @@ function userAnswer(){
      
   } else {
       setTimeout(() => {
-        holder.innerHTML = "osvojili ste " + resolt + " poena od " + (questions.length*10) ;
-        footer.innerHTML = "osvojili ste " + resolt + " poena od " + (questions.length*10) ;
+        holder.innerHTML = "osvojili ste " + resolt + " poena od " + (quiz.questions.length*10) ;
+        footer.innerHTML = "osvojili ste " + resolt + " poena od " + (quiz.questions.length*10) ;
         main.setAttribute("style", "font-size:100px");
         main.innerHTML = ":)"  ;
       }, 1300);
       
   };
 }
+
